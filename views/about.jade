@@ -1,0 +1,23 @@
+extends layout
+
+block style
+	link(rel="stylesheet", href="/stylesheets/navigation.css")
+	link(rel="stylesheet", href="/stylesheets/about.css")
+
+block header
+	include ./navigation.jade
+	
+block content
+	.about
+		.aboutMember
+			#attributeChart 
+				p physics math(useful) computer communication control
+			#aboutTitle
+				h1 Owen Yeh
+				p Electrical & Computer Engineering
+		.aboutMember
+			h1#skillsTitle Skills
+			#skillsContent 123123123123123123
+		.aboutMember
+			h1#expTitle Experiences
+			#expContent hjghkjkrgfrg

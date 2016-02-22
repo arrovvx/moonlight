@@ -8,9 +8,11 @@ block header
 	include ./navigation.jade
 	
 block content
-	ul(class="navList")
-		each name, link in navListObj
-			li(class="navListItem")
-				a(href="/#{link}") #{name}
-	//h1(class="heading") Owen Yeh
+	.index
+		ul(class="navList")
+			each name, link in navListObj
+				if !(link=="index")
+					li(class="navListItem")
+						a(href="/#{link}") #{name}
+		//h1(class="heading") Owen Yeh
 				

@@ -1,0 +1,21 @@
+.about{
+	margin-top: 50px;
+	width:100%;
+	text-align: center;
+}
+
+.aboutMember{
+	overflow:hidden;
+	margin: 0 auto;
+	width: 800px;
+}
+
+#attributeChart{
+	float: left;
+	width: 325px;
+}
+
+#aboutTitle {
+	float: left;
+	width: 325px;
+}
