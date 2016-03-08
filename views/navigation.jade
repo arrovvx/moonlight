@@ -1,8 +1,0 @@
-if navBarToggle
-	#navBar
-		ul(class='navBarList')
-			li(id="navBarSizeToggle", class="navBarListItem")
-				a(href='#',onclick="return false;") X
-			each name, link in navListObj
-				li(class="navBarListItem")
-					a(href='/#{link}') #{name}

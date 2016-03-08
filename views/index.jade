@@ -5,14 +5,12 @@ block style
 	link(rel="stylesheet", href="/stylesheets/index.css")
 
 block header
-	include ./navigation.jade
+	if navBarToggle
+		include ./navigation.html
 	
 block content
 	.index
-		ul(class="navList")
-			each name, link in navListObj
-				if !(link=="index")
-					li(class="navListItem")
-						a(href="/#{link}") #{name}
-		//h1(class="heading") Owen Yeh
+		h3 Welcome to Owen's Website
+
+		h1(class="heading") Owen Yeh
 				
