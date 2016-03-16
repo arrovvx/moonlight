@@ -1,11 +1,10 @@
 .index{
-	font-size: 1em;
+	width:100%;
+	text-align: center;
 }
 
 .heading {
 	font-size: 5.5em;
-	width:100%;
-	text-align: Right;
 }
 /*
 .navList{

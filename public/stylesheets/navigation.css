@@ -16,18 +16,38 @@ body {
 }
 
 .navBarList{
-	width: 100%;
-	margin: 0;
-	padding: 4px;
+	width: 800px;
+	margin: 0 auto;
+	padding: 4px 0;
 	list-style: none;
 	
 	text-align: center;
 	font:17px 'Arial Black';
-	/*min-width: 450px;*/
+	min-width: 450px;
+}
+
+#navBarListTitle{
+	font-family: 'Parisienne';
+	font-size:33px;
+	width: 140px;
+}
+
+#navBarListTitle a{
+	padding: 0;
+}
+
+#navBarListTitle a:hover{
+	background-color: black;
+	color: rgb(30,30,255);
+}
+
+
+#navBarListBuffer{
+	width: 350px;
 }
 
 .navBarListItem {
-	width: 5.5em;
+	width: 95px;
 	display: inline-block;
 }
 
@@ -39,7 +59,6 @@ body {
 	
 	color: Aliceblue;
 	text-decoration: none;
-	text-decoration: bold;
 }
 
 .navBarListItem a:hover{
