@@ -24,12 +24,13 @@ body {
 	text-align: center;
 	font:17px 'Arial Black';
 	min-width: 450px;
+	min-height: 50px;
 }
 
 #navBarListTitle{
 	font-family: 'Parisienne';
 	font-size:33px;
-	width: 140px;
+	width: 155px;
 }
 
 #navBarListTitle a{
@@ -47,7 +48,7 @@ body {
 }
 
 .navBarListItem {
-	width: 95px;
+	width: 110px;
 	display: inline-block;
 }
 

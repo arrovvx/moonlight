@@ -5,19 +5,8 @@ block style
 	link(rel="stylesheet", href="/stylesheets/about.css")
 
 block header
-	include ./navigation.jade
+	include ./navigation.html
 	
 block content
-	.about
-		.aboutMember
-			#attributeChart 
-				p physics math(useful) computer communication control
-			#aboutTitle
-				h1 Owen Yeh
-				p Electrical & Computer Engineering
-		.aboutMember
-			h1#skillsTitle Skills
-			#skillsContent 123123123123123123
-		.aboutMember
-			h1#expTitle Experiences
-			#expContent hjghkjkrgfrg
+	#about
+		<object data="/pdf/Owen-CV.pdf" type="application/pdf" width="100%" height="100%"></object>

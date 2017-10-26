@@ -8,11 +8,45 @@
 		</li>
 		<li id="navBarListBuffer" class="navBarListItem">
 		</li>
-		<li class="navBarListItem">
-			<a href="/about">About</a>
+		<li id="aboutItem" class="navBarListItem">
+			<a href="#">CV/Resume</a>
+			<form id="aboutForm" action="/about" method="post">
+				<input id="aboutPassword" type="hidden" name="password" value="">
+			</form>
+			<script>
+				$('#aboutItem').click(function(e) {  
+					var password=prompt('What is my middle name? or the word before "VIM"?');
+					
+					if (password){
+						var clean = password.replace(/\s/g, '');
+						if( /[^a-zA-Z]/.test( clean ) ) {
+							alert('Invalid Input');
+							return;
+						}
+						
+						$.ajax({
+							type: "POST",
+							url: "/about",
+							contentType: 'application/json',
+						    data: JSON.stringify({'password': clean.toLowerCase()}),
+							success: function(data, status, xhr) {
+								$('#aboutPassword').val(clean.toLowerCase());
+								$('#aboutForm').submit();
+							},
+							error: function(xhr, status, error) {
+								alert("Error! Invalid Password");
+								return;
+							}
+						});
+						
+					}
+					return;
+				});
+			</script>
 		</li>
 		<li class="navBarListItem">
 			<a href="/contact">Contact</a>
 		</li>
 	</ul>
+	
 </div>
