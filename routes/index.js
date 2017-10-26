@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-var key1 = JSON.parse(fs.readFileSync('key1.json', 'utf8'));
-var key2 = JSON.parse(fs.readFileSync('key2.json', 'utf8'));
+var key1 = JSON.parse(fs.readFileSync('keys/key1.json', 'utf8'));
+var key2 = JSON.parse(fs.readFileSync('keys/key2.json', 'utf8'));
 var validator = require('express-validator');
 var crypto = require('crypto');
 
@@ -38,10 +38,12 @@ router.post('/about',function(req, res, next) {
 			res.status(400).send('Invalid Inputs');
 		} else {
 			//check both password to see if there is a match
-			if(sha512(req.body.password, key1.salt) === key1.passwordHash
-				|| sha512(req.body.password, key2.salt) === key2.passwordHash){
-					
-				res.render('about', { title: "About Owen", navBarToggle: true});
+			if(sha512(req.body.password, key1.salt) === key1.passwordHash)
+				res.render('about', { title: "About Owen", file: "Owen-CV1.pdf", navBarToggle: true});
+			
+			else if (sha512(req.body.password, key2.salt) === key2.passwordHash){
+				res.render('about', { title: "About Owen", file: "Owen-CV2.pdf", navBarToggle: true});
+				
 			} else {
 				res.status(401).send('Invalid Password');
 			}
